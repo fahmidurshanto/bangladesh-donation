@@ -10,8 +10,6 @@ document.getElementById('donation-btn').addEventListener("click", function (){
     document.getElementById("donation-card-container").classList.remove("hidden");
     document.getElementById("history-container").classList.add("hidden");
 })
-
-
 // history button function
 document.getElementById("history-btn").addEventListener('click', function(){
     document.getElementById("history-container").classList.remove("hidden");
@@ -40,7 +38,8 @@ document.getElementById("noakhali-donation").addEventListener("click" , function
     newDonationAmountField.innerText = donationAmount + newDonation;
     userAmountField.innerText = userAmount - newDonation;
     addHistory(newDonation.toFixed(2), "Flood Relief in Noakhali");
-    alert(`Thank you for your donation of ${newDonation.toFixed(2)}!`);
+    document.getElementById("noakhali-donation-success").innerText = `You Have Donated for Humankind`;
+    my_modal_1.showModal();
   }
 })
 
@@ -67,7 +66,8 @@ document.getElementById("feni-donation").addEventListener("click" , function(){
     newDonationAmountField.innerText = donationAmount + newDonation;
     userAmountField.innerText = userAmount - newDonation;
     addHistory(newDonation.toFixed(2), "Flood Relief in Feni");
-    alert(`Thank you for your donation of ${newDonation.toFixed(2)}!`);
+    document.getElementById("feni-donation-success").innerText = `You Have Donated for Humankind`;
+    my_modal_2.showModal();
 
   }
 })
@@ -95,7 +95,8 @@ document.getElementById("quota-donation").addEventListener("click" , function(){
     newDonationAmountField.innerText = donationAmount + newDonation;
     userAmountField.innerText = userAmount - newDonation;
     addHistory(newDonation.toFixed(2), "Relief for injured students and people in the Quota Movement");
-    alert(`Thank you for your donation of ${newDonation.toFixed(2)}!`);
+    document.getElementById("quota-donation-success").innerText = `You Have Donated for Humankind`;
+    my_modal_3.showModal();
   }
 })
 
@@ -116,3 +117,6 @@ function addHistory (donationAmount, donationName){
 
   historyContainer.appendChild(historyCard)
 }
+
+
+

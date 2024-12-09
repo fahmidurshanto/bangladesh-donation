@@ -73,9 +73,23 @@
               placeholder="Write Donation Amount"
               class="w-full p-4"
             />
-            <button id="noakhali-donation" class="font-bold btn w-full bg-[#B4F461]">
+            <button  id="noakhali-donation" class="font-bold btn w-full bg-[#B4F461]">
               Donate Now
             </button>
+            <dialog id="my_modal_1" class="modal">
+              <div class="modal-box flex flex-col justify-center items-center">
+                <h3 class="text-4xl font-bold mb-4">Congrats</h3>
+                <img src="./assets/coin.png" >
+                <p id="noakhali-donation-success" class="py-4"></p>
+                <h2 class="text-3xl font-bold">Successfully</h2>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
         </div>
         <!-- Feni Donation topic Details Card -->
@@ -108,43 +122,73 @@
               placeholder="Write Donation Amount"
               class="w-full p-4"
             />
+            
             <button id="feni-donation" class="font-bold btn w-full bg-[#B4F461]">
               Donate Now
             </button>
+            <dialog id="my_modal_2" class="modal">
+              <div class="modal-box flex flex-col justify-center items-center">
+                <h3 class="text-4xl font-bold mb-4">Congrats</h3>
+                <img src="./assets/coin.png" >
+                <p id="feni-donation-success" class="py-4"></p>
+                <h2 class="text-3xl font-bold">Successfully</h2>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
           </div>
-        </div>
-        <!-- Quota Donation topic Details Card -->
-        <div
-          class="container mx-auto p-4 border border-gray-200 rounded-md flex flex-col lg:flex-row justify-between gap-5 mb-3"
-        >
-          <img src="./assets/quota-protest.png" />
-          <div class="p-4 space-y-10">
-            <button
-              class="bg-[#1111110D] flex justify-between gap-2 py-4 px-10 rounded-md"
-            >
-              <img src="./assets/coin.png" /><span id="quota-donation-amount">0</span> BDT
-            </button>
-            <h3 id="quota-title" class="font-bold">Aid for Injured in the Quota Movement</h3>
-            <p>
-              The recent Quota movement has resulted in numerous injuries and
-              significant hardship for many individuals. Your support is crucial
-              in providing medical assistance, rehabilitation, and necessary
-              supplies to those affected. By contributing, you help ensure that
-              injured individuals receive the care and support they need during
-              this challenging time. Every donation plays a vital role in
-              alleviating their suffering and aiding in their recovery. Please
-              consider making a donation to support these brave individuals in
-              their time of need.
-            </p>
-            <input
-              id="quota-donation-input"
-              type="text"
-              placeholder="Write Donation Amount"
-              class="w-full p-4"
-            />
-            <button id="quota-donation" class="font-bold btn w-full bg-[#B4F461]">
-              Donate Now
-            </button>
+          </div>
+          <!-- Quota Donation topic Details Card -->
+          <div
+            class="container mx-auto p-4 border border-gray-200 rounded-md flex flex-col lg:flex-row justify-between gap-5 mb-3"
+          >
+            <img src="./assets/quota-protest.png" />
+            <div class="p-4 space-y-10">
+              <button
+                class="bg-[#1111110D] flex justify-between gap-2 py-4 px-10 rounded-md"
+              >
+                <img src="./assets/coin.png" /><span id="quota-donation-amount">0</span> BDT
+              </button>
+              <h3 id="quota-title" class="font-bold">Aid for Injured in the Quota Movement</h3>
+              <p>
+                The recent Quota movement has resulted in numerous injuries and
+                significant hardship for many individuals. Your support is crucial
+                in providing medical assistance, rehabilitation, and necessary
+                supplies to those affected. By contributing, you help ensure that
+                injured individuals receive the care and support they need during
+                this challenging time. Every donation plays a vital role in
+                alleviating their suffering and aiding in their recovery. Please
+                consider making a donation to support these brave individuals in
+                their time of need.
+              </p>
+              <input
+                id="quota-donation-input"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="w-full p-4"
+              />
+              <button id="quota-donation" class="font-bold btn w-full bg-[#B4F461]">
+                Donate Now
+              </button>
+              <dialog id="my_modal_3" class="modal">
+                <div class="modal-box flex flex-col justify-center items-center">
+                  <h3 class="text-4xl font-bold mb-4">Congrats</h3>
+                  <img src="./assets/coin.png" >
+                  <p id="quota-donation-success" class="py-4"></p>
+                  <h2 class="text-3xl font-bold">Successfully</h2>
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
           </div>
         </div>
       </div>
@@ -153,15 +197,28 @@
       <div id="history-container" class="hidden space-y-5 m-4 history-container rounded-md">
         <div class="history-card space-y-5 p-5 m-4 rounded-md shadow">
           <h3 class="font-bold">
-            0 Taka is Donated for Famine-2024 at Feni, Bangladesh
+            This is a sample Notification
           </h3>
           <p>Date: <span id="current-time"></span></p>
         </div>
       </div>
-    </main>
 
-    <!-- Footer section -->
-    <footer></footer>
+    
+
+      <!-- Static Modal -->
+      <div id="success-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full space-y-4">
+          <h2 id="modal-title" class="text-lg font-bold">Donation Successful!</h2>
+          <p id="modal-message"></p>
+          <button
+            id="modal-close-btn"
+            class="btn w-full bg-[#B4F461] font-bold text-center"
+          >
+            Close
+          </button>
+        </div>
+      </div>
     <script src="/scripts/script.js"></script>
+
   </body>
 </html>
