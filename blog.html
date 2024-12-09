@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="container mx-auto px-4 py-8">
+    <header class="mb-8 text-center">
+      <h1 class="text-4xl font-bold text-blue-600">Blog Page</h1>
+      <p class="text-lg text-gray-600">Explore Answers to Key DOM Concepts</p>
+    </header>
+    <main class="space-y-8">
+      <!-- Question 1 -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-blue-500">What is the Document Object Model (DOM)?</h2>
+        <p class="mt-4 text-gray-700">
+          The Document Object Model (DOM) is a programming interface that allows developers to manipulate the structure, style, and content of a webpage. It represents the HTML document as a tree of objects, enabling dynamic changes to the webpage through scripting languages like JavaScript.
+        </p>
+      </section>
+      <!-- Question 2 -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-blue-500">How do you select an element from the DOM?</h2>
+        <p class="mt-4 text-gray-700">
+          To select an element from the DOM, you can use JavaScript methods like:
+        </p>
+        <ul class="list-disc pl-6 mt-2 text-gray-700">
+          <li><code>document.getElementById('id')</code>: Selects an element by its ID.</li>
+          <li><code>document.querySelector('selector')</code>: Selects the first element matching a CSS selector.</li>
+          <li><code>document.querySelectorAll('selector')</code>: Selects all elements matching a CSS selector.</li>
+          <li><code>document.getElementsByClassName('className')</code>: Selects elements by their class name.</li>
+        </ul>
+      </section>
+      <!-- Question 3 -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-blue-500">What is event delegation in the context of the DOM, and why is it useful?</h2>
+        <p class="mt-4 text-gray-700">
+          Event delegation is a technique in which a single event listener is added to a parent element to manage events on its child elements. This is useful because:
+        </p>
+        <ul class="list-disc pl-6 mt-2 text-gray-700">
+          <li>It reduces memory usage by minimizing the number of event listeners.</li>
+          <li>It works on dynamically added elements, as the parent handles the event.</li>
+          <li>It simplifies event management for groups of similar child elements.</li>
+        </ul>
+      </section>
+      <!-- Question 4 -->
+      <section class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-blue-500">How do you manipulate an element's attributes and styles using the DOM?</h2>
+        <p class="mt-4 text-gray-700">
+          To manipulate an element's attributes and styles using the DOM, you can:
+        </p>
+        <ul class="list-disc pl-6 mt-2 text-gray-700">
+          <li>Use <code>element.setAttribute('attribute', 'value')</code> to add or update an attribute.</li>
+          <li>Use <code>element.getAttribute('attribute')</code> to retrieve an attribute's value.</li>
+          <li>Use <code>element.removeAttribute('attribute')</code> to remove an attribute.</li>
+          <li>Use <code>element.style.property = 'value'</code> to update inline styles.</li>
+          <li>Use <code>element.classList.add('className')</code>, <code>element.classList.remove('className')</code>, or <code>element.classList.toggle('className')</code> to manage CSS classes.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
